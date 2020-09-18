@@ -3,6 +3,8 @@ export interface OnePagerPerson {
   name: string;
   title: string;
   description?: string;
+  linkedin?: string;
+  companyInv?: string;
 }
 
 /** Public access one pager data fields. */
@@ -27,4 +29,6 @@ export interface OnePagerData {
   fundraisingDetails?: string;
   pitchVideoLink?: string;
   investors?: OnePagerPerson[];
+  marketsize?: string;
+  location?: string;
 }

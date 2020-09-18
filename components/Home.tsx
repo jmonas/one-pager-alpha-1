@@ -2,10 +2,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 import { Box, Heading, Text, Divider } from '@chakra-ui/core';
-
 import { Header } from './Header';
 import { getAllPublicOnePagerData } from '../data/dataService';
 import { OnePagerPublicData } from '../model/model';
+import { CompanyPreview } from './companyPreview';
 
 /** Renders the home component. */
 export const Home = () => {
@@ -21,6 +21,7 @@ export const Home = () => {
   }, []);
 
   return (
+    <>
     <Box>
       <Head>
         <title>One Pager Alpha</title>
@@ -40,11 +41,16 @@ export const Home = () => {
           </Heading>
 
           <Divider />
-
-          <OnePagerLinks onePagers={onePagers} />
+          <br/>
+         
         </Box>
       </Box>
+      <Box d='flex' justifyContent='`center`'>
+      <OnePagerLinks onePagers={onePagers} />
     </Box>
+    </Box>
+    
+    </>
   );
 };
 
@@ -56,12 +62,13 @@ const OnePagerLinks = ({ onePagers }: OnePagerLinksProps) => {
   return (
     <>
       {onePagers.map((onePagerData: OnePagerPublicData) => (
-        <Box key={onePagerData.companyName} marginBottom='10px'>
+        <Box title={onePagerData.companyName}>
           <Link href='/[onePagerSlug]' as={`/${onePagerData.url}`}>
             <a>{onePagerData.companyName}</a>
           </Link>
           <Text margin='0'>{onePagerData.briefDescription}</Text>
-        </Box>
+          </Box>
+        
       ))}
     </>
   );

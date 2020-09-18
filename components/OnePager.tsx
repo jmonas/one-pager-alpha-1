@@ -1,8 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Box, Flex, Divider } from '@chakra-ui/core';
-
+import { Box, Flex, Divider, AspectRatioBox } from '@chakra-ui/core';
 import { OnePagerData } from '../model/model';
 import { getOnePagerData } from '../data/dataService';
 import { EMPTY_ONE_PAGER } from '../data/onepagers';
@@ -12,6 +11,7 @@ import { OnePagerOverview } from './OnePagerOverview';
 import { OnePagerFounders } from './OnePagerFounders';
 import { OnePagerFinances } from './OnePagerFinances';
 import { OnePagerVideo } from './OnePagerVideo';
+import { OnePagerLocation } from './OnePagerLocation';
 
 /** Renders a full one pager based on the onePagerUrl. */
 export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
@@ -19,7 +19,6 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
     EMPTY_ONE_PAGER
   );
   const [isLoading, setIsLoading]: [boolean, any] = React.useState(false);
-
   // Load data on first render.
   React.useEffect(() => {
     setIsLoading(true);
@@ -28,7 +27,6 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
       setIsLoading(false);
     });
   }, []);
-
   return (
     <Box bg='#f2f4f5'>
       <Head>
@@ -49,10 +47,19 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
       <OnePagerFinances onePagerData={onePagerData} isLoading={isLoading} />
 
       <Diveder50 />
+      
+      {onePagerData.pitchVideoLink && <> <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading} />
 
-      <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading} />
+  <Diveder50 /> </>}
 
-      <Diveder50 />
+  {onePagerData.location && <> <OnePagerLocation onePagerData={onePagerData} isLoading={isLoading} />
+
+<Diveder50 /> </>}
+
+    
+
+ 
+      
 
       <ContentCard isLoading={false}>
         <Flex justifyContent='center'>
@@ -64,6 +71,11 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
       <Box h='20'></Box>
     </Box>
   );
+
+
+
 };
 
 const Diveder50 = () => <Divider width='50%' />;
+
+

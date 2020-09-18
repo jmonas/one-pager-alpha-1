@@ -24,8 +24,10 @@ const facebook: OnePagerData = {
   fundsRaisedInStage: 100000,
   fundraisingDetails: 'To transform from a school network to a public website',
   founders: [founders.facebook1, founders.facebook2, founders.facebook3],
-  pitchVideoLink: 'https://www.youtube.com/watch?v=WzgNAN3dW-I',
+  pitchVideoLink: 'https://www.youtube.com/embed/WzgNAN3dW-I',
   investors: [investors.investor2],
+  marketsize: '$57B', 
+  location: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.375295414770757!3d6.5276316452784755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1567723392506!5m2!1sen!2sng',
 };
 
 const lendingClub: OnePagerData = {
@@ -41,6 +43,9 @@ const lendingClub: OnePagerData = {
   fundraisingDetails: 'Expand capabilities and accelerate customer growth',
   founders: [founders.lendingClub1, founders.lendingClub2],
   investors: [investors.investor1],
+  marketsize: '37B', 
+
+  
 };
 
 const spotify: OnePagerData = {
@@ -55,8 +60,12 @@ const spotify: OnePagerData = {
   fundsRaisedInStage: 500000,
   fundraisingDetails: 'Grow music library and licenses, developers salaries',
   founders: [founders.spotify1, founders.spotify2],
-  pitchVideoLink: 'https://www.youtube.com/watch?v=ZDXETBfXSuc&t=166s',
+  pitchVideoLink: 'https://www.youtube.com/embed/ZDXETBfXSuc',
   investors: [investors.investor1],
+  marketsize: '56B', 
+  location: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.375295414770757!3d6.5276316452784755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1567723392506!5m2!1sen!2sng',
+
+
 };
 
 const workday: OnePagerData = {
@@ -72,6 +81,7 @@ const workday: OnePagerData = {
   fundraisingDetails: 'Develop software platform',
   founders: [founders.workday1, founders.workday2],
   investors: [investors.investor1, investors.investor2],
+  marketsize: '9.8B', 
 };
 
 const zynga: OnePagerData = {
@@ -86,8 +96,11 @@ const zynga: OnePagerData = {
   fundsRaisedInStage: 10000000,
   fundraisingDetails: 'Game production, acquisition and marketing',
   founders: [founders.zynga1, founders.zynga2, founders.zynga3],
-  pitchVideoLink: 'https://www.youtube.com/watch?v=HdVWHAPiqno',
+  pitchVideoLink: 'https://www.youtube.com/embed/HdVWHAPiqno',
   investors: [investors.investor1, investors.investor3],
+  marketsize: '49B', 
+  location: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.375295414770757!3d6.5276316452784755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1567723392506!5m2!1sen!2sng',
+
 };
 
 /** Map of urls to full one pager data. */

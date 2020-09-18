@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading } from '@chakra-ui/core';
+import { Flex, Badge, Heading, Text,AspectRatioBox,Box } from '@chakra-ui/core';
 
 import { OnePagerData } from '../model/model';
 import { ContentCard } from './ContentCard';
@@ -16,9 +16,14 @@ export const OnePagerVideo = ({
   return (
     <ContentCard title='Pitch Video' isLoading={isLoading}>
       <Heading as='h2' size='md' marginRight='10px'>
-        <a href={onePagerData.pitchVideoLink} target='_blank'>
-          Link to Pitch Video
-        </a>
+        <AspectRatioBox  ratio={1.4}>
+          <Box
+            as="iframe"
+            title="naruto"
+            src={onePagerData.pitchVideoLink}
+            allowFullScreen
+          />
+        </AspectRatioBox>
       </Heading>
     </ContentCard>
   );
