@@ -5,8 +5,14 @@ import { Box, Heading, Text, Divider } from '@chakra-ui/core';
 import { Header } from './Header';
 import { getAllPublicOnePagerData } from '../data/dataService';
 import { OnePagerPublicData } from '../model/model';
-import { CompanyPreview } from './companyPreview';
-
+import { OnePagerData, OnePagerPerson } from '../model/model';
+import { CompanyPreview } from './CompanyPreview';
+import { ContentCard } from './ContentCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
+import {faFacebook} from '@fortawesome/free-brands-svg-icons'
+import {faGithub} from '@fortawesome/free-brands-svg-icons'
+import { Image } from "@chakra-ui/core";
 /** Renders the home component. */
 export const Home = () => {
   const [onePagers, setOnePagers]: [OnePagerPublicData[], any] = React.useState(
@@ -31,22 +37,23 @@ export const Home = () => {
       <Header />
 
       <Box d='flex' justifyContent='center'>
-        <Box w='xl'>
-          <Heading as='h1' size='xl'>
+        <Box w='xl' width='100%'>
+          <Heading as='h1' size='xl' textAlign='center'>
             Welcome to One Pager Alpha!
           </Heading>
 
-          <Heading as='h2' size='md'>
+          <Heading as='h2' size='md' textAlign='center'>
             View active OnePagers
           </Heading>
 
           <Divider />
-          <br/>
-         
+          <br/>      
+   
         </Box>
       </Box>
-      <Box d='flex' justifyContent='`center`'>
+      <Box d='flex' marginLeft='40px' marginRight='40px' justifyContent='`center`'>
       <OnePagerLinks onePagers={onePagers} />
+
     </Box>
     </Box>
     
@@ -56,18 +63,30 @@ export const Home = () => {
 
 type OnePagerLinksProps = {
   onePagers: OnePagerPublicData[];
+  
 };
 
+type OnePagerLocationProps = {
+  isLoading: boolean;
+};
 const OnePagerLinks = ({ onePagers }: OnePagerLinksProps) => {
+
   return (
     <>
-      {onePagers.map((onePagerData: OnePagerPublicData) => (
-        <Box title={onePagerData.companyName}>
+      {onePagers.map((onePagerData: OnePagerPublicData) => (<>
+      
+          <ContentCard isLoading={false} height='300px'>
+          <Link href='/[onePagerSlug]' as={`/${onePagerData.url}`}><a>
+          <Box d='flex' justifyContent='center'>
+          <Image width='100%'  marginRight='20px' height = '125px'src={onePagerData.companyImage} alt="Segun Adebayo" /> 
+        </Box></a>
+        </Link>
+
           <Link href='/[onePagerSlug]' as={`/${onePagerData.url}`}>
-            <a>{onePagerData.companyName}</a>
+            <a>{<Text fontSize='1.10rem' marginTop='10px' marginBottom='10px' color='black'>{onePagerData.briefDescription}</Text>}</a>
           </Link>
-          <Text margin='0'>{onePagerData.briefDescription}</Text>
-          </Box>
+          </ContentCard>         
+          </>
         
       ))}
     </>

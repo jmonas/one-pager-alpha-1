@@ -9,6 +9,7 @@ export const EMPTY_ONE_PAGER: OnePagerData = {
   industryTags: [],
   briefDescription: '',
   founders: [],
+  companyImage:'',
 };
 
 const facebook: OnePagerData = {
@@ -28,6 +29,7 @@ const facebook: OnePagerData = {
   investors: [investors.investor2],
   marketsize: '$57B', 
   location: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.375295414770757!3d6.5276316452784755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1567723392506!5m2!1sen!2sng',
+  companyImage: 'https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/-XM2Nhn2gP6.png'
 };
 
 const lendingClub: OnePagerData = {
@@ -44,6 +46,7 @@ const lendingClub: OnePagerData = {
   founders: [founders.lendingClub1, founders.lendingClub2],
   investors: [investors.investor1],
   marketsize: '37B', 
+  companyImage: 'https://www.lendingclub.com/asset/ls/wp-assets/wp-content/uploads/2017/05/LC-Logo-Official-min-1024x418.png?v=2017-05-17T10:05:03'
 
   
 };
@@ -64,6 +67,7 @@ const spotify: OnePagerData = {
   investors: [investors.investor1],
   marketsize: '56B', 
   location: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.375295414770757!3d6.5276316452784755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1567723392506!5m2!1sen!2sng',
+  companyImage: 'https://www.scdn.co/i/_global/open-graph-default.png'
 
 
 };
@@ -82,6 +86,8 @@ const workday: OnePagerData = {
   founders: [founders.workday1, founders.workday2],
   investors: [investors.investor1, investors.investor2],
   marketsize: '9.8B', 
+  companyImage: 'https://www.workday.com/content/dam/web/en-us/images/social/workday-og-theme.png'
+
 };
 
 const zynga: OnePagerData = {
@@ -100,6 +106,7 @@ const zynga: OnePagerData = {
   investors: [investors.investor1, investors.investor3],
   marketsize: '49B', 
   location: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.375295414770757!3d6.5276316452784755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1567723392506!5m2!1sen!2sng',
+  companyImage: 'https://static.media.thinknum.com/media/uploads/blog/.thumbnails/alternativedata_zynga_covid_featured.jpg/alternativedata_zynga_covid_featured-770x400.jpg'
 
 };
 
@@ -121,5 +128,6 @@ export const ONE_PAGERS_PUBLIC_DATA_ARRAY: OnePagerPublicData[] = Array.from(
     url: onePager.url,
     industryTags: onePager.industryTags,
     briefDescription: onePager.briefDescription,
+    companyImage:onePager.companyImage,
   };
 });

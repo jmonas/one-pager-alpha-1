@@ -17,7 +17,7 @@ export const OnePagerOverview = ({
 
     const handleClick=()=>{
       setButtonState(!buttonState)
-      buttonState?(toast({
+      !buttonState?(toast({
         position: "bottom-left",
         title: `You're now following ${onePagerData.companyName}`,
         status: "success",
@@ -32,10 +32,9 @@ export const OnePagerOverview = ({
       <Heading as='h1' size='lg' marginRight='10px'>
         {onePagerData.companyName}
 
-        {buttonState?(<Button variantColor="blue" variant="outline" size="xs" marginLeft="15px"
-      onClick={handleClick}> Follow
-      </Button>):(<Button variantColor="blue" variant="solid" size="xs" marginLeft="15px"
-      onClick={handleClick}> Following</Button>)}
+        {buttonState?(<Button variantColor="blue" variant="solid" size="xs" marginLeft="15px"
+      onClick={handleClick}> Following</Button>):(<Button variantColor="blue" variant="outline" size="xs" marginLeft="15px"
+      onClick={handleClick}> Follow</Button>)}
 
        
       </Heading>

@@ -1,14 +1,9 @@
+  
 import React from 'react';
 import { Box, Flex, Heading, Text, Avatar } from '@chakra-ui/core';
-
 import { OnePagerData, OnePagerPerson } from '../model/model';
 import { ContentCard } from './ContentCard';
-import  ReactDOM  from  'react-dom';
 import { getAllPublicOnePagerData } from '../data/dataService';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
-import {faFacebook} from '@fortawesome/free-brands-svg-icons'
-import {faGithub} from '@fortawesome/free-brands-svg-icons'
 
 
 
@@ -57,16 +52,14 @@ const Founder = ({ person }: { person: OnePagerPerson }) => {
         <Text fontSize='sm' marginTop='0px' marginBottom ='0px'>
           {person.description}
         </Text>
-        {person.linkedin ? (<a href={person.linkedin} target='_blank'>
-       <i> <FontAwesomeIcon icon={faLinkedin} /></i>
-        </a>): null}
-        <a href={person.linkedin} target='_blank'>
-       <i> <FontAwesomeIcon color="darkblue" icon={faFacebook} /></i>
-        </a>
-        <a href={person.linkedin} target='_blank'>
-       <i> <FontAwesomeIcon color = "black"icon={faGithub} /></i>
-        </a>
+        {person.linkedin?
+        <a href={person.linkedin} target='_blank'><i><img src="https://img.icons8.com/color/20/000000/linkedin.png"/></i></a>
+        :null}
+        <a href={person.linkedin} target='_blank'><i><img src="https://img.icons8.com/color/20/000000/facebook-new.png"/></i></a>
+        <a href={person.linkedin} target='_blank'><i><img src="https://img.icons8.com/color/20/000000/github--v1.png"/></i></a>
+        <a href={person.linkedin} target='_blank'><i><img src="https://img.icons8.com/color/20/000000/instagram-new.png"/></i></a>
         
+
       </Box>
     </Flex>
   );

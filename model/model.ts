@@ -13,6 +13,8 @@ export interface OnePagerPublicData {
   url: string;
   industryTags: string[];
   briefDescription: string;
+  companyImage:string;
+
 }
 
 /** Full one pager data model. */
@@ -31,4 +33,5 @@ export interface OnePagerData {
   investors?: OnePagerPerson[];
   marketsize?: string;
   location?: string;
+  companyImage:string;
 }

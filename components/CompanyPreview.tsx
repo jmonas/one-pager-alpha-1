@@ -6,8 +6,7 @@ type CompanyPreviewProps = {
 };
 
 /**
- * Renders basic card for displaying content.
- * Display skeltons if isLoading.
+ * Renders basic card for displaying company
  * */
 export const CompanyPreview = ({
   title,
@@ -24,9 +23,28 @@ export const CompanyPreview = ({
       p='0'
       margin='10px auto'
       bg='white'
-      justifyContent='flex-start'
     >
+      {title && (
+        <>
+          <Box>
+            <Heading as='h2' size='md' m='0' p='20px 10px 0'>
+              {title}
+            </Heading>
+          </Box>
+        </>
+      )}
+      <Box p='10px'>{children}</Box>
     </Box>
   );
 };
 
+/** Renders loading skeletons. */
+const LoadingSkeletons = () => {
+  return (
+    <>
+      <Skeleton h='15px' marginBottom='10px'></Skeleton>
+      <Skeleton h='15px' marginBottom='10px'></Skeleton>
+      <Skeleton h='20px'></Skeleton>{' '}
+    </>
+  );
+};
