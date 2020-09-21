@@ -28,7 +28,7 @@ const facebook: OnePagerData = {
   pitchVideoLink: 'https://www.youtube.com/embed/WzgNAN3dW-I',
   investors: [investors.investor2],
   marketsize: '$57B', 
-  location: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.375295414770757!3d6.5276316452784755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1567723392506!5m2!1sen!2sng',
+  location: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.3485225201835!2d-122.15126624388027!3d37.4832625475002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbc96de8dc419%3A0x64979e438bf4e3a5!2sFacebook!5e0!3m2!1sen!2sus!4v1600698175599!5m2!1sen!2sus',
   companyImage: 'https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/-XM2Nhn2gP6.png'
 };
 
@@ -66,7 +66,6 @@ const spotify: OnePagerData = {
   pitchVideoLink: 'https://www.youtube.com/embed/ZDXETBfXSuc',
   investors: [investors.investor1],
   marketsize: '56B', 
-  location: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.375295414770757!3d6.5276316452784755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1567723392506!5m2!1sen!2sng',
   companyImage: 'https://www.scdn.co/i/_global/open-graph-default.png'
 
 
@@ -86,6 +85,7 @@ const workday: OnePagerData = {
   founders: [founders.workday1, founders.workday2],
   investors: [investors.investor1, investors.investor2],
   marketsize: '9.8B', 
+  location:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.9340041837113!2d-122.39573708468184!3d37.79158637975644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f015967d%3A0x5107127fbbe21ba6!2sWorkday%20-%20San%20Francisco!5e0!3m2!1sen!2sus!4v1600698674972!5m2!1sen!2sus',
   companyImage: 'https://www.workday.com/content/dam/web/en-us/images/social/workday-og-theme.png'
 
 };
@@ -105,7 +105,7 @@ const zynga: OnePagerData = {
   pitchVideoLink: 'https://www.youtube.com/embed/HdVWHAPiqno',
   investors: [investors.investor1, investors.investor3],
   marketsize: '49B', 
-  location: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.375295414770757!3d6.5276316452784755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1567723392506!5m2!1sen!2sng',
+  location: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27650155.636510186!2d-118.03733055524977!3d32.22408055811344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e32567b8339%3A0xdaea45de58ad3064!2sZynga!5e0!3m2!1sen!2sus!4v1600698754733!5m2!1sen!2sus',
   companyImage: 'https://static.media.thinknum.com/media/uploads/blog/.thumbnails/alternativedata_zynga_covid_featured.jpg/alternativedata_zynga_covid_featured-770x400.jpg'
 
 };

@@ -6,12 +6,8 @@ import { Header } from './Header';
 import { getAllPublicOnePagerData } from '../data/dataService';
 import { OnePagerPublicData } from '../model/model';
 import { OnePagerData, OnePagerPerson } from '../model/model';
-import { CompanyPreview } from './CompanyPreview';
 import { ContentCard } from './ContentCard';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLinkedin} from '@fortawesome/free-brands-svg-icons'
-import {faFacebook} from '@fortawesome/free-brands-svg-icons'
-import {faGithub} from '@fortawesome/free-brands-svg-icons'
+
 import { Image } from "@chakra-ui/core";
 /** Renders the home component. */
 export const Home = () => {

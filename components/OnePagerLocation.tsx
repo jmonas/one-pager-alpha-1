@@ -1,4 +1,4 @@
-import { Flex, Badge, Heading, Text,AspectRatioBox,Box } from '@chakra-ui/core';
+import { Flex, Badge, Heading, Text,AspectRatioBox, Box, Image} from '@chakra-ui/core';
 
 import { OnePagerData } from '../model/model';
 import { ContentCard } from './ContentCard';
@@ -12,14 +12,12 @@ export const OnePagerLocation = ({
   onePagerData,
   isLoading,
 }: OnePagerLocationProps) => {
+  const location: string = onePagerData.location;
   return (
     <ContentCard title='Location' isLoading={isLoading}>
-        <AspectRatioBox ratio={16 / 9}>
-         <Box   
-           as="iframe"
-           src={onePagerData.location}
-           alt="demo"   />
-        </AspectRatioBox>
+        <Heading as='h2' size='md' marginRight='10px'>
+        <iframe src={location} width="600" height="450" ></iframe>
+      </Heading>
     </ContentCard>
   );
 };

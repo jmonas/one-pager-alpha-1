@@ -48,7 +48,7 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
 
       <Diveder50 />
       
-      {onePagerData.pitchVideoLink && <> <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading} />
+      {onePagerData.pitchVideoLink && <> <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading}/>
 
   <Diveder50 /> </>}
 
