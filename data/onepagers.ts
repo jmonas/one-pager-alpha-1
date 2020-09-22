@@ -26,7 +26,7 @@ const facebook: OnePagerData = {
   fundraisingDetails: 'To transform from a school network to a public website',
   founders: [founders.facebook1, founders.facebook2, founders.facebook3],
   pitchVideoLink: 'https://www.youtube.com/embed/WzgNAN3dW-I',
-  investors: [investors.investor2],
+  investors: [investors.investor2, investors.investor3],
   marketsize: '$57B', 
   location: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.3485225201835!2d-122.15126624388027!3d37.4832625475002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbc96de8dc419%3A0x64979e438bf4e3a5!2sFacebook!5e0!3m2!1sen!2sus!4v1600698175599!5m2!1sen!2sus',
   companyImage: 'https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/-XM2Nhn2gP6.png'
@@ -44,7 +44,6 @@ const lendingClub: OnePagerData = {
   fundsRaisedInStage: 5000000,
   fundraisingDetails: 'Expand capabilities and accelerate customer growth',
   founders: [founders.lendingClub1, founders.lendingClub2],
-  investors: [investors.investor1],
   marketsize: '37B', 
   companyImage: 'https://www.lendingclub.com/asset/ls/wp-assets/wp-content/uploads/2017/05/LC-Logo-Official-min-1024x418.png?v=2017-05-17T10:05:03'
 

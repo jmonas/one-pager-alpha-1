@@ -6,6 +6,7 @@ type ContentCardProps = {
   children: any;
   height?: string;
   minWidth?:string;
+  maxWidth?:string;
 };
 
 /**
@@ -15,7 +16,7 @@ type ContentCardProps = {
 export const ContentCard = ({
   title,
   isLoading = false,
-  children, height, minWidth
+  children, height, minWidth, maxWidth
 }: ContentCardProps) => {
   return (
     <Box
@@ -30,6 +31,7 @@ export const ContentCard = ({
       bg='white'
       height={height}
       minWidth={minWidth}
+      maxWidth={maxWidth}
 
     >
       {title && (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Badge, Heading, Text, Box } from '@chakra-ui/core';
+import { Flex, Badge, Heading, Text, Box, Divider } from '@chakra-ui/core';
 import { CircularProgress, CircularProgressLabel } from "@chakra-ui/core";
 import { OnePagerData, OnePagerPerson } from '../model/model';
 import { ContentCard } from './ContentCard';
@@ -32,24 +32,22 @@ export const OnePagerFinances = ({
     return formatter.format(financeNumber);
   };
 
-  /* const Founder = ({ company }: { company: OnePagerPerson }) => {
+   const Founder = ({ company }: { company: OnePagerPerson }) => {
     return <Text fontSize='sm'>{company.companyInv}</Text> 
-  }; */
+  }; 
+
 
   const raised = onePagerData.fundsRaisedInStage;
   const goal = onePagerData.fundraisingStageGoal;
   const percent = raised/goal *100;
   const rounded = Math.round(percent).toString();
+  const investors:OnePagerPerson[] = onePagerData.investors;
   
   return (
     <ContentCard title='Finances' isLoading={isLoading}>
       <Text fontSize='sm'>{"Goals: " + onePagerData.fundraisingDetails}</Text>
-      {/* {onePagerData.investors.map((company: OnePagerPerson) => (
-        <Founder key={company.companyInv} company={company}></Founder>
-      ))}
-      <Text fontSize='sm'>{onePagerData.investors}</Text> */}
+      
       <Box d= "flex" marginTop="5px" alignItems ="strech">
-        
           <Box>
             <Heading as='h1' size='lg' marginRight='10px' marginBottom='0'>
               Funding Stage: {onePagerData.fundraisingStage}
@@ -64,13 +62,33 @@ export const OnePagerFinances = ({
         <Box marginLeft = "100px" marginTop="20px"> 
           <CircularProgress value={percent} color="green" size = {"150px"}>
           <CircularProgressLabel>{rounded}%</CircularProgressLabel>
-          </CircularProgress>
+          </CircularProgress>       
         </Box>
       </Box>
-      
+      {investors ? (<>
+        <Divider/>
+        <SubHeading>
+              Investors
+            </SubHeading>
+      <Investors investors={investors}/></> ):null}
     </ContentCard>
   );
 };
+
+
+type InvestorsProps = {
+  investors: OnePagerPerson[];
+};
+const Investors = ({investors}:InvestorsProps )=>(
+  <Box>
+    {investors && investors.map((company: OnePagerPerson) =>(
+    <Box>
+      <Text fontSize='sm'><li>{company.companyInv}</li></Text>
+    </Box>)
+    )}
+    </Box>
+);
+
 
 
 /** Renders smaller heading. */
